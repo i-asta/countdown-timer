@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo:regular,italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Bagel+Fat+One:regular);
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    --main-bg-color: #0C134F;
+    --main-timer-color: #fff;
+    --main-color: #fff;
+    --font-body: "Arvo";
+    --font-timer: "Bagel Fat One";
+}
+
+body {
+    background: var(--main-bg-color);
+    /* Aligning main container to center */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+}
+
+.container_main {
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 60%; */
+    height: auto;
+    position: relative;
+}
+
+.main_break-options {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2.5rem;
+    /* gap: 2rem; */
+}
+
+.main_break-options>button {
+    color: var(--main-color);
+    background: transparent;
+    border: 2px solid #fff;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+}
+
+
+.main_timer {
+    font-family: var(--font-timer);
+    font-size: 10rem;
+    font-weight: 500;
+    color: var(--main-timer-color);
+    margin-bottom: 2.5rem;
+
+}
+
+.main_quick-controls {
+    /* background-color:red; */
+    display: flex;
+    gap: 1rem;
+}
+
+.main_quick-controls>button {
+    font-size: 1.3rem;
+    border-radius: 5rem;
+    border: none;
+
+}
+
+.main_quick-controls .controls_start-timer {
+
+    padding: 1rem 2.5rem;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.main_quick-controls .controls_reset-timer {
+    padding: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.main_quick-controls .controls_settings {
+    padding: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--main-color);
+
+}
+.controls_settings-modal{
+    height: 25rem ;
+    width: 20rem;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0rem;
+    right: -10%;
+    border-radius: 10%;
+    padding: 1rem;
+    display:none;
+    /* position: relative; */
+}
+.modal_close{
+    height: 2rem;
+    width: 2rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    border-radius:50% ;
+    top: 1rem;
+    right:1rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
